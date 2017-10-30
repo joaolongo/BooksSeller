@@ -1,0 +1,8 @@
+[
+  {
+    "outputFileName": "Scripts/directives/ng-currency.min.js",
+    "inputFiles": [
+      "Scripts/directives/ng-currency.js"
+    ]
+  }
+]

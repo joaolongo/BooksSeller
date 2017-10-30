@@ -1,0 +1,31 @@
+﻿<div class="panel panel-primary" ng-controller="booksListController as vm">
+    <div class="panel-heading" style="font-size:large">
+        Books List
+    </div>
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Code</td>
+                    <td>Title</td>
+                    <td>Available</td>
+                    <td>Price in {{ currency }}</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="book in vm.books">
+                    <td>{{ book.Code }}</td>
+                    <td>{{ book.Title }}</td>
+                    <td>{{ book.ReleaseDate | date:'dd/MM/yyyy' }}</td>
+                    <td>{{ book.Price | currency:"R$ " }}</td>
+                    <td>
+                        <button type="button" ng-click="vm.editBook(book.Id)" class="btn btn-default">
+                            Editar
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
